@@ -189,22 +189,79 @@ footer {
 }
 
 /* Responsive*/
+/* ========== ESTILOS RESPONSIVE ========== */
+
+/* 🌐 Estilos para tabletas (pantallas menores a 768px) */
 @media (max-width: 768px) {
-  header {
-      flex-direction: column;
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 90%;
+    padding: 15px;
   }
 
   nav ul {
-      flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 20px;
   }
 
   .grid {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr; /* 2 columnas en lugar de 3 o más */
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 14px;
   }
 }
 
+/* 📱 Estilos para móviles (pantallas menores a 480px) */
 @media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .navcontainer {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .hero {
+    max-width: 100%;
+    padding: 10px;
+  }
+
   .grid {
-      grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr; /* 1 sola columna para más espacio */
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
   }
 }
